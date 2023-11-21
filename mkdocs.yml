@@ -6,6 +6,17 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/TNCT-Mechatech
+nav:
+  - ホーム:
+      - index.md
+  - 機械:
+      - mechanical/index.md
+  - 回路:
+      - circuit/index.md
+  - 制御:
+      - control/index.md
+  - 教育:
+      - education/index.md
 theme:
   name: material
   language: ja
