@@ -9,6 +9,9 @@ extra:
 nav:
   - ホーム:
       - index.md
+  - 共通:
+      - common/index.md
+      - ページ追加方法: common/create-new-document/index.md
   - 機械:
       - mechanical/index.md
   - 回路:
