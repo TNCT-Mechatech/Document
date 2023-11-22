@@ -4,7 +4,7 @@ Mechatech 部の全てをまとめたドキュメントです。
 
 ## ページ追加方法
 
-(後日記入)
+[ページ追加方法](docs/common/create-new-document/index.md)
 
 ## Material MkDocs 公式リファレンス
 
