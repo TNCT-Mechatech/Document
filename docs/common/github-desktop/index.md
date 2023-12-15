@@ -52,10 +52,12 @@ https://docs.github.com/ja/desktop
 左側に写っている「Changes」部分にステージ済み、未ステージのファイルを見ることができます。  
 ステージングするファイルにはチェックマークを入れることでステージできます。
 
-未ステージファイル
+**未ステージファイル**
+
 ![unstaged-changes](assets/unstaged-changes.png)
 
-ステージ済みファイル
+**ステージ済みファイル**
+
 ![staged-changes](assets/staged-change.png)
 
 ### コミット
@@ -75,7 +77,7 @@ feat: 画像ファイル等のassetsの追加
 
 ![commit](assets/commit.png)
 
-### 例 2 適切なコメント
+#### 例 2 適切なコメント
 
 ７セグメント LED の処理を Ticker を用いて変更した場合
 
