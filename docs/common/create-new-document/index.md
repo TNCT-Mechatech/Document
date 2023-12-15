@@ -24,6 +24,54 @@ docs
 mkdocs.yml
 ```
 
+## ブランチ規則
+
+`main`ブランチから作業用のブランチを切って作業を行います。
+
+### Style
+
+```
+<type>/<alias>
+```
+
+### Type
+
+`main`: プロダクション用ブランチ  
+`feature`: 開発用ブランチ
+
+### 例
+
+Power Drive のドキュメントを作成する場合のブランチ名
+
+```
+feature/ad-power-drive-document
+```
+
+## コミット規則
+
+### Template
+
+```
+<type>: <subject>
+```
+
+### Type
+
+- **feat**: 新機能
+- **change**: 修正・削除
+
+### Subject
+
+コミットの説明文になります。原則日本語を使ってください。
+
+### 例
+
+Power Drive のドキュメントを追加した場合
+
+```
+feat: Power Driveのドキュメントを追加
+```
+
 ## ページ追加
 
 1. (任意) `mkdocs-material`をインストールして、`mkdocs serve`コマンドを打つ。
