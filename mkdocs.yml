@@ -13,6 +13,7 @@ nav:
       - common/index.md
       - ページ追加方法: common/create-new-document/index.md
       - GitHub Desktop: common/github-desktop/index.md
+      - Trello: common/trello/index.md
   - 機械:
       - mechanical/index.md
   - 回路:
