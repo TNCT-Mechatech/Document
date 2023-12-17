@@ -19,6 +19,11 @@ nav:
       - circuit/index.md
   - 制御:
       - control/index.md
+      - Mbed:
+          - control/mbed/index.md
+          - API:
+              - control/mbed/api/index.md
+              - Ticker: control/mbed/api/ticker/index.md
   - 教育:
       - education/index.md
 theme:
