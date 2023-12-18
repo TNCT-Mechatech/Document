@@ -25,6 +25,8 @@ nav:
           - API:
               - control/mbed/api/index.md
               - Ticker: control/mbed/api/ticker/index.md
+      - 通信:
+          - control/communication/index.md
   - 教育:
       - education/index.md
 theme:
