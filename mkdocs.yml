@@ -20,6 +20,8 @@ nav:
       - circuit/index.md
   - 制御:
       - control/index.md
+      - Jetson Orin Nano:
+          - control/orin-nano-jetpack-install/index.md
       - Mbed:
           - control/mbed/index.md
           - API:
