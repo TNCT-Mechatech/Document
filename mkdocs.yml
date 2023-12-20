@@ -19,7 +19,7 @@ nav:
   - 回路:
       - circuit/index.md
       - 開発環境: circuit/development-environment/index.md
-      - 部品説明: circuit/component/index.md
+      - 基礎部品: circuit/component/index.md
   - 制御:
       - control/index.md
       - Jetson Orin Nano:
