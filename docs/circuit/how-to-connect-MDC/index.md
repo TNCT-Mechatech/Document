@@ -1,7 +1,7 @@
 # MDC (Motor Driver Controller) との接続方法について
 
 ---
-<img src="assets/img.png" width="437" title="hinata-pinmap" alt="hinata-pinmap" align="right">
+<img src="assets/img.png" width="300" title="hinata-pinmap" alt="hinata-pinmap" align="right">
 
 ## ひなたとつなげる場合
 ##### AzusaなどのCAN-FDモジュールとつなげるとき用
@@ -19,7 +19,7 @@ CAN-FDでつなげているモジュールの一番端のモジュールの終�
 (GNDは5箇所あるが、どこも内部回路でつながっているのでどこに挿しても同様。)  
 後述する推奨・非推奨の理由は、マイコンに付随するすべてのモジュールをマイコンの電源供給で済ませる場合、マイコンのGNDが細い部分での異常発熱と、大電流によるレギュレーターへの過剰な負荷を防止するためです。
 
-- LANケーブルかつながっている先(Azusaなど)から給電する場合 **(推奨)**
+- LANケーブルかつながっている先(Azusaなど)から給電する場合 **(推奨)**　　
     
     　特につなぐ必要はないが、この場合すべて(マイコン、Azusaなどを含む)のモジュールを同じ電源供給元にする必要がある。(SPI,CAN-FD通信をしている関係上)
 
@@ -42,6 +42,8 @@ LANコネクタの緑色LEDにつながっているピンです。
 
 ## PowerUnit, 遠野とつなげる場合
 ##### MILコネクタ
+
+コネクタに矢印が入っているところが1番ピン、GNDです。
 
 #### 3V3, GND
 3V3は3.3Vのところ、GNDはGNDにつなげればOKです。
