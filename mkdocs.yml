@@ -18,6 +18,8 @@ nav:
       - mechanical/index.md
   - 回路:
       - circuit/index.md
+      - Twelite:
+        - circuit/how-to-use-twelite/index.md
       - 開発環境: circuit/development-environment/index.md
       - 基礎部品: circuit/component/index.md
       - MDCとの接続方法: circuit/how-to-connect-MDC/index.md
