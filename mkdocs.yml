@@ -18,6 +18,8 @@ nav:
       - mechanical/index.md
   - 回路:
       - circuit/index.md
+      - Twelite:
+        - circuit/how-to-use-twelite/index.md
   - 制御:
       - control/index.md
       - Jetson Orin Nano:
