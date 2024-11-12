@@ -36,7 +36,8 @@ nav:
           - control/communication/index.md
       - Raspberry Pi:
           - control/RaspberryPi/index.md
-          - pigpio: control/RaspberryPi/pigpio/index.md
+          - pigpio:
+              - control/RaspberryPi/pigpio/index.md
   - 教育:
       - education/index.md
 theme:

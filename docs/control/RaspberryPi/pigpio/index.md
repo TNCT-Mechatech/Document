@@ -1,55 +1,55 @@
-# GPIO��p��������
+# GPIOを用いた制御
 
-- ## GPIO �Ƃ�
+- ## GPIO とは
 
-GPIO�́AGeneral Purpose Input/Output �̗��ł���BRaspberry Pi���܂ރR���s���[�^�ɊeGPIO�[�q�ɂ͓���̋@�\��������Ă���A���[�U�[�̈ӎv�Ŏ��R�ɓd�C�M���̓��o�͂𑀍�ł���B
+GPIOは、General Purpose Input/Output の略である。Raspberry Piを含むコンピュータに各GPIO端子には特定の機能が備わっており、ユーザーの意思で自由に電気信号の入出力を操作できる。
 
-# �{��
+# 本題
 
 ## pigpio
 
-�ǂݕ���*�p�C�E�W�[�s�[�A�C�I�[*�ł���B������*�҂��҂�*�Ȃ�ĂւȂ��傱�Ȗ��O�ł͂Ȃ��B
+読み方は*パイ・ジーピーアイオー*である。決して*ぴぐぴお*なんてへなちょこな名前ではない。
 
-- ### �T�v
+- ### 概要
 
-pigpio �Ƃ� Raspberry Pi ��GPIO��p��������ɗp���郉�C�u�����ł���B���ׂ�����ł́AC++, Python�ɑΉ����Ă���B
+pigpio とは Raspberry Pi のGPIOを用いた制御に用いるライブラリである。調べた限りでは、C++, Pythonに対応している。
 
-- ### ����
+- ### 導入
 
-������[pigpio�����T�C�g](https://abyz.me.uk/rpi/pigpio/)���Q�l�ɍs���B
+導入は[pigpio公式サイト](https://abyz.me.uk/rpi/pigpio/)を参考に行う。
 
-1. **�{�̂̃C���X�g�[��**
+1. **本体のインストール**
 
-�^�[�~�i���ňȉ��̃R�}���h�����s����B
+ターミナルで以下のコマンドを実行する。
 ```
-wget https://github.com/joan2937/pigpio/archive/master.zip #github����pigpio�{�̂��_�E�����[�h
-unzip master.zip   #�_�E�����[�h���� pigpio�{�̂���
-cd pigpio-master   #�V�����f�B���N�g���Ɉړ�����B(�Ȃ��ꍇ�͍쐬���邱�ƁB->mkdir)
+wget https://github.com/joan2937/pigpio/archive/master.zip #githubからpigpio本体をダウンロード
+unzip master.zip   #ダウンロードした pigpio本体を解凍
+cd pigpio-master   #新しくディレクトリに移動する。(ない場合は作成すること。->mkdir)
 make
-sudo make install  #�C���X�g�[��
+sudo make install  #インストール
 ```
 
-����� pigpio �� Raspberry Pi �ɃC���X�g�[�������B
+すると pigpio が Raspberry Pi にインストールされる。
 
-(Python �Ő�����������Ƃ��͂܂��ʂɃC���X�g�[�����K�v�Ȃ��̂�����Ƃ��Ȃ��Ƃ��B)
+(Python で制御をしたいときはまた別にインストールが必要なものがあるとかないとか。)
 
-2. **���ϐ��̌p���ƒǉ�(ros2���g���ꍇ�̂�)**
+2. **環境変数の継承と追加(ros2を使う場合のみ)**
 
-���ɁAsudo���[�U�[��ros2 humble����F���ł���悤�Ɋ��ϐ���ݒ肷��K�v������B
+次に、sudoユーザーがros2 humble等を認識できるように環境変数を設定する必要がある。
 
-�^�[�~�i���ňȉ��̃R�}���h�����s����B
+ターミナルで以下のコマンドを実行する。
 ```
 nano /stc/environment
 ```
 
-����ƁA�ȉ��̂悤�ȉ�ʂɂȂ�͂��ł���B
+すると、以下のような画面になるはずである。
 ```
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 ```
 
-�����̓V�X�e���S�̂̃f�t�H���g�̊��ϐ����`����ꏊ�ł���B�����ݒ�ł� PATH ���ϐ��݂̂��L����Ă���B
+ここはシステム全体のデフォルトの環境変数を定義する場所である。初期設定では PATH 環境変数のみが記されている。
 
-��������������������B
+ここをこう書き換える。
 
 ```
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
@@ -57,17 +57,17 @@ LD_LIBRARY_PATH="/opt/ros/humble/lib:/usr/local/lib:/usr/lib"
 PYTHONPATH="/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages"
 ```
 
-�������邱�Ƃɂ���āAroot�܂߁A���ׂẴ��[�U�[���A����������`LD_LIBRARY_PATH`��`PYTHONPATH`���g�����Ƃ��ł���悤�ɂȂ�B
+こうすることによって、root含め、すべてのユーザーが、書き足した`LD_LIBRARY_PATH`と`PYTHONPATH`を使うことができるようになる。
 
-�Ō�ɁAroot���[�U�[�Ƃ��Ẵm�[�h�̎��s�ɕK�v�ȋ@�\���g�����߂Ɋ��ϐ���ǉ����Ă����B
+最後に、rootユーザーとしてのノードの実行に必要な機能を使うために環境変数を追加していく。
 
-�^�[�~�i���ňȉ��̃R�}���h�����s����B
+ターミナルで以下のコマンドを実行する。
 
 ```
 sudo visudo
 ```
 
-����Ƃ��̂悤�ȉ�ʂɂȂ�B
+するとこのような画面になる。
 
 ```
 #
@@ -91,12 +91,12 @@ Defaults        use_pty
 # different sudoers have their choice of editor respected.
 #Defaults:%sudo env_keep += "EDITOR"
 
-#����...
+#続く...
 ```
 
-������sudo�R�}���h�̓���⌠�����Ǘ�����d�v�Ȑݒ�t�@�C���ł���A���[�U�[��O���[�v��sudo���g���ăR�}���h�����s����ۂ̃��[�����L�q����Ă���B
+ここはsudoコマンドの動作や権限を管理する重要な設定ファイルであり、ユーザーやグループがsudoを使ってコマンドを実行する際のルールが記述されている。
 
-�������������������B
+これをこう書き換える。
 
 ```
 Defaults        env_reset
@@ -109,6 +109,6 @@ Defaults        env_keep += "PATH"
 Defaults        env_keep += "AMENT_PREFIX_PATH"
 ```
 
-�ǉ����镔����`Defaults env_pty`�̉��̎l�݂̂ł���A���̂ق���`#`�R�����g�A�E�g���͏��������Ȃ��Ă悢�B
+追加する部分は`Defaults env_pty`の下の四つのみであり、そのほかの`#`コメントアウト等は書き換えなくてよい。
 
-�ȏ�œ����͏I���ł���B���Ԃ�B
+以上で導入は終わりである。たぶん。

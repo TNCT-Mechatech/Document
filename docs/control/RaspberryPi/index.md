@@ -1,3 +1,3 @@
 # Raspberry Pi
 
-- [GPIO ‚ğ—p‚¢‚½§Œä(pigpio)](pigpio/index.md)
+- [GPIO ã‚’ç”¨ã„ãŸåˆ¶å¾¡(pigpio)](pigpio/index.md)
