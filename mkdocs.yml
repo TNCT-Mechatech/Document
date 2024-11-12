@@ -34,6 +34,8 @@ nav:
               - Ticker: control/mbed/api/ticker/index.md
       - 通信:
           - control/communication/index.md
+      - Raspberry Pi:
+          - control/Raspberry-Pi/index.md
   - 教育:
       - education/index.md
 theme:
