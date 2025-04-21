@@ -39,7 +39,7 @@ sudo make install  #インストール
 
 ターミナルで以下のコマンドを実行する。
 ```
-nano /stc/environment
+nano /etc/environment
 ```
 
 すると、以下のような画面になるはずである。
