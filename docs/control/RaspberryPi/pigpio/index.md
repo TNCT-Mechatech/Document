@@ -20,7 +20,11 @@ pigpio とは Raspberry Pi のGPIOを用いた制御に用いるライブラリ�
 
 1. **本体のインストール**
 
-ターミナルで以下のコマンドを実行する。
+ターミナルで以下のコマンドを実行する
+。
+RaspberryPiにキーボード、モニタなどを直接接続して操作している場合は、`Ctrl+Alt+T`でターミナルを開ける。
+
+VSC & sshで外部から操作している場合は、画面上部の三点マークからターミナルを開ける。
 ```
 wget https://github.com/joan2937/pigpio/archive/master.zip #githubからpigpio本体をダウンロード
 unzip master.zip   #ダウンロードした pigpio本体を解凍
@@ -39,7 +43,7 @@ sudo make install  #インストール
 
 ターミナルで以下のコマンドを実行する。
 ```
-nano /etc/environment
+sudo nano /etc/environment
 ```
 
 すると、以下のような画面になるはずである。
@@ -58,6 +62,12 @@ PYTHONPATH="/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/l
 ```
 
 こうすることによって、root含め、すべてのユーザーが、書き足した`LD_LIBRARY_PATH`と`PYTHONPATH`を使うことができるようになる。
+
+nanoの簡単な操作
+`↑``→``↓``←` :カーソル移動
+`Ctrl + o`→`Enter(Return)` :書き込み確認→確定
+`Ctrl + X` :nanoを終了
+`Alt + U` :一個戻る
 
 最後に、rootユーザーとしてのノードの実行に必要な機能を使うために環境変数を追加していく。
 
