@@ -13,6 +13,7 @@
 ディレクトリ内には、`common` (共通)、`mechanical` (機械班)、`circuit` (回路班)、`control` (制御班)、`education` (教育資料)があります。
 
 `mkdocs.yml`は追加した markdown ファイルを登録する設定ファイルです。
+なお、作成した markdown ファイルは、必ず、文字コード`UTF-8N`で保存してください。
 
 ```
 docs
