@@ -1,47 +1,47 @@
 
 
 
-# ROS2 C++ ƒvƒƒWƒFƒNƒg ƒ`[ƒ€ŠJ”­‰^—pƒ}ƒjƒ…ƒAƒ‹
+# ROS2 C++ ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ ãƒãƒ¼ãƒ é–‹ç™ºé‹ç”¨ãƒãƒ‹ãƒ¥ã‚¢ãƒ«
 
 ---
 
-## –ÚŸ
+## ç›®æ¬¡
 
-1. [ƒŠƒ|ƒWƒgƒŠì¬E‰Šú‰»](#ƒŠƒ|ƒWƒgƒŠì¬‰Šú‰»)
-2. [Raspberry Pi ‘¤‚Å‚ÌƒZƒbƒgƒAƒbƒv](#raspberry-pi-‘¤‚Å‚ÌƒZƒbƒgƒAƒbƒv)
-3. [SSHŒ®‚Ì¶¬‚ÆGitHub“o˜^](#sshŒ®‚Ì¶¬‚Ægithub“o˜^)
-4. [ƒŠƒ‚[ƒgƒŠƒ|ƒWƒgƒŠ‚ÌƒNƒ[ƒ“](#ƒŠƒ‚[ƒgƒŠƒ|ƒWƒgƒŠ‚ÌƒNƒ[ƒ“)
-5. [ƒŠƒ|ƒWƒgƒŠ‰ŠúƒRƒ~ƒbƒg](#ƒŠƒ|ƒWƒgƒŠ‰ŠúƒRƒ~ƒbƒg)
-6. [.gitignore‚Ìİ’è—á](#gitignore‚Ìİ’è—á)
-7. [ƒRƒ~ƒbƒgEpullEpush‚ÌŠî–{è‡](#ƒRƒ~ƒbƒgpullpush‚ÌŠî–{è‡)
-8. [ƒuƒ‰ƒ“ƒ`‰^—p‚ÆPull Request](#ƒuƒ‰ƒ“ƒ`‰^—p‚Æpull-request)
-9. [ƒgƒ‰ƒuƒ‹ƒVƒ…[ƒeƒBƒ“ƒO](#ƒgƒ‰ƒuƒ‹ƒVƒ…[ƒeƒBƒ“ƒO)
-10. [‰^—pƒ‹[ƒ‹‚Ü‚Æ‚ß](#‰^—pƒ‹[ƒ‹‚Ü‚Æ‚ß)
-
----
-
-## ƒŠƒ|ƒWƒgƒŠì¬E‰Šú‰»
-
-### 1.1 GitHub‚ÅƒŠƒ|ƒWƒgƒŠ‚ğV‹Kì¬
-
-1. [GitHub](https://github.com/)‚ÉƒƒOƒCƒ“‚µAuNew repositoryv‚ğƒNƒŠƒbƒNB
-2. Repository name ‚ğ“ü—Íi—á: `robot-control`j
-3. uInitialize this repository with a READMEv‚Í**ƒ`ƒFƒbƒN‚ğŠO‚·**i‹óƒŠƒ|ƒWƒgƒŠ„§j
-4. Public / Private ‚ğ‘I‘ğ
-5. ì¬ŒãAƒŠƒ|ƒWƒgƒŠ‚ÌSSH‚Ü‚½‚ÍHTTPS URL‚ğT‚¦‚éB
+1. [ãƒªãƒã‚¸ãƒˆãƒªä½œæˆãƒ»åˆæœŸåŒ–](#ãƒªãƒã‚¸ãƒˆãƒªä½œæˆåˆæœŸåŒ–)
+2. [Raspberry Pi å´ã§ã®ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—](#raspberry-pi-å´ã§ã®ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—)
+3. [SSHéµã®ç”Ÿæˆã¨GitHubç™»éŒ²](#sshéµã®ç”Ÿæˆã¨githubç™»éŒ²)
+4. [ãƒªãƒ¢ãƒ¼ãƒˆãƒªãƒã‚¸ãƒˆãƒªã®ã‚¯ãƒ­ãƒ¼ãƒ³](#ãƒªãƒ¢ãƒ¼ãƒˆãƒªãƒã‚¸ãƒˆãƒªã®ã‚¯ãƒ­ãƒ¼ãƒ³)
+5. [ãƒªãƒã‚¸ãƒˆãƒªåˆæœŸã‚³ãƒŸãƒƒãƒˆ](#ãƒªãƒã‚¸ãƒˆãƒªåˆæœŸã‚³ãƒŸãƒƒãƒˆ)
+6. [.gitignoreã®è¨­å®šä¾‹](#gitignoreã®è¨­å®šä¾‹)
+7. [ã‚³ãƒŸãƒƒãƒˆãƒ»pullãƒ»pushã®åŸºæœ¬æ‰‹é †](#ã‚³ãƒŸãƒƒãƒˆpullpushã®åŸºæœ¬æ‰‹é †)
+8. [ãƒ–ãƒ©ãƒ³ãƒé‹ç”¨ã¨Pull Request](#ãƒ–ãƒ©ãƒ³ãƒé‹ç”¨ã¨pull-request)
+9. [ãƒˆãƒ©ãƒ–ãƒ«ã‚·ãƒ¥ãƒ¼ãƒ†ã‚£ãƒ³ã‚°](#ãƒˆãƒ©ãƒ–ãƒ«ã‚·ãƒ¥ãƒ¼ãƒ†ã‚£ãƒ³ã‚°)
+10. [é‹ç”¨ãƒ«ãƒ¼ãƒ«ã¾ã¨ã‚](#é‹ç”¨ãƒ«ãƒ¼ãƒ«ã¾ã¨ã‚)
 
 ---
 
-## Raspberry Pi ‘¤‚Å‚ÌƒZƒbƒgƒAƒbƒv
+## ãƒªãƒã‚¸ãƒˆãƒªä½œæˆãƒ»åˆæœŸåŒ–
 
-### 2.1 Git‚ÌƒCƒ“ƒXƒg[ƒ‹i‰‰ñ‚Ì‚İj
+### 1.1 GitHubã§ãƒªãƒã‚¸ãƒˆãƒªã‚’æ–°è¦ä½œæˆ
+
+1. [GitHub](https://github.com/)ã«ãƒ­ã‚°ã‚¤ãƒ³ã—ã€ã€ŒNew repositoryã€ã‚’ã‚¯ãƒªãƒƒã‚¯ã€‚
+2. Repository name ã‚’å…¥åŠ›ï¼ˆä¾‹: `robot-control`ï¼‰
+3. ã€ŒInitialize this repository with a READMEã€ã¯**ãƒã‚§ãƒƒã‚¯ã‚’å¤–ã™**ï¼ˆç©ºãƒªãƒã‚¸ãƒˆãƒªæ¨å¥¨ï¼‰
+4. Public / Private ã‚’é¸æŠ
+5. ä½œæˆå¾Œã€ãƒªãƒã‚¸ãƒˆãƒªã®SSHã¾ãŸã¯HTTPS URLã‚’æ§ãˆã‚‹ã€‚
+
+---
+
+## Raspberry Pi å´ã§ã®ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—
+
+### 2.1 Gitã®ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ï¼ˆåˆå›ã®ã¿ï¼‰
 
 ```bash
 sudo apt update
 sudo apt install git
 ````
 
-### 2.2 ƒ†[ƒU[î•ñ‚Ìİ’èi‰‰ñ‚Ì‚İj
+### 2.2 ãƒ¦ãƒ¼ã‚¶ãƒ¼æƒ…å ±ã®è¨­å®šï¼ˆåˆå›ã®ã¿ï¼‰
 
 ```bash
 git config --global user.name "Your Name"
@@ -50,36 +50,36 @@ git config --global user.email "your_email@example.com"
 
 ---
 
-## SSHŒ®‚Ì¶¬‚ÆGitHub“o˜^
+## SSHéµã®ç”Ÿæˆã¨GitHubç™»éŒ²
 
-### 3.1 V‚µ‚¢SSHŒ®‚ğì¬
+### 3.1 æ–°ã—ã„SSHéµã‚’ä½œæˆ
 
 ```bash
 ssh-keygen -t ed25519 -C "your_email@example.com"
-# ‚»‚Ì‚Ü‚ÜEnter˜A‘Å‚ÅOKiƒpƒXƒtƒŒ[ƒY‚Í”CˆÓj
+# ãã®ã¾ã¾Enteré€£æ‰“ã§OKï¼ˆãƒ‘ã‚¹ãƒ•ãƒ¬ãƒ¼ã‚ºã¯ä»»æ„ï¼‰
 ```
 
-### 3.2 ŒöŠJŒ®‚ÌŠm”F‚ÆGitHub“o˜^
+### 3.2 å…¬é–‹éµã®ç¢ºèªã¨GitHubç™»éŒ²
 
 ```bash
 cat ~/.ssh/id_ed25519.pub
-# o—Í‚³‚ê‚½1s‘S•”‚ğƒRƒs[
+# å‡ºåŠ›ã•ã‚ŒãŸ1è¡Œå…¨éƒ¨ã‚’ã‚³ãƒ”ãƒ¼
 ```
 
-* GitHub ¨ ‰EãƒAƒCƒRƒ“ ¨ Settings ¨ SSH and GPG keys ¨ New SSH key
-* Title‚Í©—RAKey—“‚ÉƒRƒs[‚µ‚½ŒöŠJŒ®‚ğ“\‚è•t‚¯AuAdd SSH keyv
+* GitHub â†’ å³ä¸Šã‚¢ã‚¤ã‚³ãƒ³ â†’ Settings â†’ SSH and GPG keys â†’ New SSH key
+* Titleã¯è‡ªç”±ã€Keyæ¬„ã«ã‚³ãƒ”ãƒ¼ã—ãŸå…¬é–‹éµã‚’è²¼ã‚Šä»˜ã‘ã€ã€ŒAdd SSH keyã€
 
 ---
 
-## ƒŠƒ‚[ƒgƒŠƒ|ƒWƒgƒŠ‚ÌƒNƒ[ƒ“
+## ãƒªãƒ¢ãƒ¼ãƒˆãƒªãƒã‚¸ãƒˆãƒªã®ã‚¯ãƒ­ãƒ¼ãƒ³
 
-### 4.1 ƒvƒƒWƒFƒNƒg‚Ì•Û‘¶æƒfƒBƒŒƒNƒgƒŠ‚ÉˆÚ“®
+### 4.1 ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ä¿å­˜å…ˆãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ç§»å‹•
 
 ```bash
 cd ~/your_workspace/
 ```
 
-### 4.2 ƒNƒ[ƒ“
+### 4.2 ã‚¯ãƒ­ãƒ¼ãƒ³
 
 ```bash
 git clone git@github.com:YourUserName/robot-control.git
@@ -88,31 +88,31 @@ cd robot-control
 
 ---
 
-## ƒŠƒ|ƒWƒgƒŠ‰ŠúƒRƒ~ƒbƒg
+## ãƒªãƒã‚¸ãƒˆãƒªåˆæœŸã‚³ãƒŸãƒƒãƒˆ
 
-### 5.1 ƒvƒƒWƒFƒNƒgƒtƒ@ƒCƒ‹‚Ì”z’u
+### 5.1 ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆãƒ•ã‚¡ã‚¤ãƒ«ã®é…ç½®
 
-i—áF`include`, `src`, `CMakeLists.txt`‚È‚Ç‚ğ‚±‚ÌƒfƒBƒŒƒNƒgƒŠ’¼‰º‚É”z’uj
+ï¼ˆä¾‹ï¼š`include`, `src`, `CMakeLists.txt`ãªã©ã‚’ã“ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªç›´ä¸‹ã«é…ç½®ï¼‰
 
-### 5.2 .gitignore‚Ìì¬
+### 5.2 .gitignoreã®ä½œæˆ
 
 ```bash
 nano .gitignore
-# •K—v‚È“à—e‚ğ‹LÚi—á‚Í‰º‹Lj
+# å¿…è¦ãªå†…å®¹ã‚’è¨˜è¼‰ï¼ˆä¾‹ã¯ä¸‹è¨˜ï¼‰
 ```
 
-### 5.3 Å‰‚ÌƒRƒ~ƒbƒg‚Æpush
+### 5.3 æœ€åˆã®ã‚³ãƒŸãƒƒãƒˆã¨push
 
 ```bash
 git add .
-git commit -m "‰‰ñƒRƒ~ƒbƒg: ƒvƒƒWƒFƒNƒg‰Šú\¬"
+git commit -m "åˆå›ã‚³ãƒŸãƒƒãƒˆ: ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆåˆæœŸæ§‹æˆ"
 git branch -M main
 git push -u origin main
 ```
 
 ---
 
-## .gitignore‚Ìİ’è—á
+## .gitignoreã®è¨­å®šä¾‹
 
 ```gitignore
 /build/
@@ -127,68 +127,68 @@ git push -u origin main
 
 ---
 
-## ƒRƒ~ƒbƒgEpullEpush‚ÌŠî–{è‡
+## ã‚³ãƒŸãƒƒãƒˆãƒ»pullãƒ»pushã®åŸºæœ¬æ‰‹é †
 
-### 7.1 ì‹Æ‘O‚Ìpulli‘¼l‚ÌXV‚ğæ“¾j
+### 7.1 ä½œæ¥­å‰ã®pullï¼ˆä»–äººã®æ›´æ–°ã‚’å–å¾—ï¼‰
 
 ```bash
 git pull origin main
 ```
 
-### 7.2 ƒtƒ@ƒCƒ‹‚Ì•ÒW
+### 7.2 ãƒ•ã‚¡ã‚¤ãƒ«ã®ç·¨é›†
 
-iVSCode‚ÅƒŠƒ‚[ƒgÚ‘±‚µ•ÒW„§j
+ï¼ˆVSCodeã§ãƒªãƒ¢ãƒ¼ãƒˆæ¥ç¶šã—ç·¨é›†æ¨å¥¨ï¼‰
 
-### 7.3 •ÏX‚ÌŠm”F
+### 7.3 å¤‰æ›´ã®ç¢ºèª
 
 ```bash
 git status
 ```
 
-### 7.4 •ÏX‚Ì’Ç‰Á
+### 7.4 å¤‰æ›´ã®è¿½åŠ 
 
 ```bash
 git add .
-# ‚Ü‚½‚Í
-git add ƒtƒ@ƒCƒ‹–¼
+# ã¾ãŸã¯
+git add ãƒ•ã‚¡ã‚¤ãƒ«å
 ```
 
-### 7.5 ƒRƒ~ƒbƒg
+### 7.5 ã‚³ãƒŸãƒƒãƒˆ
 
 ```bash
-git commit -m "•ÏX“à—e‚ğŠÈŒ‰‚É‹Lq"
+git commit -m "å¤‰æ›´å†…å®¹ã‚’ç°¡æ½”ã«è¨˜è¿°"
 ```
 
 ### 7.6 push
 
 ```bash
-git push origin ƒuƒ‰ƒ“ƒ`–¼
-# —áFgit push origin main
+git push origin ãƒ–ãƒ©ãƒ³ãƒå
+# ä¾‹ï¼šgit push origin main
 ```
 
 ---
 
-## ƒuƒ‰ƒ“ƒ`‰^—p‚ÆPull Request
+## ãƒ–ãƒ©ãƒ³ãƒé‹ç”¨ã¨Pull Request
 
-### 8.1 V‹Kƒuƒ‰ƒ“ƒ`‚Ìì¬
+### 8.1 æ–°è¦ãƒ–ãƒ©ãƒ³ãƒã®ä½œæˆ
 
 ```bash
 git checkout -b feature/xxxx
 ```
 
-### 8.2 •ÏX“à—e‚Ìpush
+### 8.2 å¤‰æ›´å†…å®¹ã®push
 
 ```bash
 git push origin feature/xxxx
 ```
 
-### 8.3 Pull Request‚Ìì¬
+### 8.3 Pull Requestã®ä½œæˆ
 
-1. GitHub‚ÅƒŠƒ|ƒWƒgƒŠƒy[ƒW‚ğŠJ‚­
-2. `feature/xxxx`ƒuƒ‰ƒ“ƒ`‚ÅuCompare & pull requestv‚ğƒNƒŠƒbƒN
-3. ƒŒƒrƒ…[‚ğó‚¯A³”F‚³‚ê‚½‚çmain‚Éƒ}[ƒW
+1. GitHubã§ãƒªãƒã‚¸ãƒˆãƒªãƒšãƒ¼ã‚¸ã‚’é–‹ã
+2. `feature/xxxx`ãƒ–ãƒ©ãƒ³ãƒã§ã€ŒCompare & pull requestã€ã‚’ã‚¯ãƒªãƒƒã‚¯
+3. ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚’å—ã‘ã€æ‰¿èªã•ã‚ŒãŸã‚‰mainã«ãƒãƒ¼ã‚¸
 
-### 8.4 mainƒuƒ‰ƒ“ƒ`‚ÌXV‚ğpull
+### 8.4 mainãƒ–ãƒ©ãƒ³ãƒã®æ›´æ–°ã‚’pull
 
 ```bash
 git checkout main
@@ -197,44 +197,44 @@ git pull origin main
 
 ---
 
-## ƒgƒ‰ƒuƒ‹ƒVƒ…[ƒeƒBƒ“ƒO
+## ãƒˆãƒ©ãƒ–ãƒ«ã‚·ãƒ¥ãƒ¼ãƒ†ã‚£ãƒ³ã‚°
 
-### SSH‚ÌuPermission denied (publickey)vƒGƒ‰[‚ªo‚½ê‡
+### SSHã®ã€ŒPermission denied (publickey)ã€ã‚¨ãƒ©ãƒ¼ãŒå‡ºãŸå ´åˆ
 
-* Œ®‚ğì¬‚µ’¼‚µ‚ÄA\*\*ƒ†[ƒU[‚ÌuSSH and GPG keysv\*\*‚ÉÄ“o˜^‚·‚é‚±‚Æ
-* Deploy keyi“Ç‚İæ‚èê—pj‚É“o˜^‚µ‚È‚¢‚±‚Æ
+* éµã‚’ä½œæˆã—ç›´ã—ã¦ã€\*\*ãƒ¦ãƒ¼ã‚¶ãƒ¼ã®ã€ŒSSH and GPG keysã€\*\*ã«å†ç™»éŒ²ã™ã‚‹ã“ã¨
+* Deploy keyï¼ˆèª­ã¿å–ã‚Šå°‚ç”¨ï¼‰ã«ç™»éŒ²ã—ãªã„ã“ã¨
 
-### uprojectvƒfƒBƒŒƒNƒgƒŠ‚²‚Æpush‚µ‚Ä‚µ‚Ü‚Á‚½ê‡
+### ã€Œprojectã€ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã”ã¨pushã—ã¦ã—ã¾ã£ãŸå ´åˆ
 
-* •K—v‚È‚çGitHub‚ÌƒŠƒ|ƒWƒgƒŠ‚ğˆê“xíœ‚µAƒfƒBƒŒƒNƒgƒŠ’¼‰º‚É`include`‚â`src`‚ª‚ ‚éŒ`‚ÅÄpush‚·‚é
+* å¿…è¦ãªã‚‰GitHubã®ãƒªãƒã‚¸ãƒˆãƒªã‚’ä¸€åº¦å‰Šé™¤ã—ã€ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªç›´ä¸‹ã«`include`ã‚„`src`ãŒã‚ã‚‹å½¢ã§å†pushã™ã‚‹
 
-### SSH‰‰ñÚ‘±‚Ìuauthenticity of hostvƒƒbƒZ[ƒW
+### SSHåˆå›æ¥ç¶šæ™‚ã®ã€Œauthenticity of hostã€ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
 
-* ƒtƒBƒ“ƒK[ƒvƒŠƒ“ƒg‚ªGitHubŒö®‚Æˆê’v‚µ‚Ä‚¢‚ê‚Î`yes`‚ÅOK
-
----
-
-## ‰^—pƒ‹[ƒ‹‚Ü‚Æ‚ß
-
-* **ƒRƒ~ƒbƒgEpush/pull‚Í•K‚¸Raspberry Piã‚Å“ˆê‚µ‚ÄÀs**
-* **mainƒuƒ‰ƒ“ƒ`‚É’¼Úpush‹Ö~A•K‚¸featureƒuƒ‰ƒ“ƒ`¨Pull Request‚Å‰^—p**
-* **ì‹Æ‘O‚Í•K‚¸pull‚µ‚ÄÅV‰»**
-* **ƒRƒ“ƒtƒŠƒNƒg‚ªo‚½ê‡‚Í—‚¿’…‚¢‚Ä`git status`/`git diff`‚Å“à—e‚ğŠm”F‚µAC³‚·‚é‚±‚Æ**
-* **.gitignore‚ğç‚èAƒrƒ‹ƒh¶¬•¨‚â•s—vƒtƒ@ƒCƒ‹‚ÍƒŠƒ|ƒWƒgƒŠ‚ÉŠÜ‚ß‚È‚¢**
-* **README.md“™‚ÉƒZƒbƒgƒAƒbƒvè‡Aƒ‹[ƒ‹Aƒgƒ‰ƒuƒ‹–—á‚ğ’Ç‹L‚·‚é**
+* ãƒ•ã‚£ãƒ³ã‚¬ãƒ¼ãƒ—ãƒªãƒ³ãƒˆãŒGitHubå…¬å¼ã¨ä¸€è‡´ã—ã¦ã„ã‚Œã°`yes`ã§OK
 
 ---
 
-## ‚æ‚­g‚¤GitƒRƒ}ƒ“ƒh‚Ü‚Æ‚ß
+## é‹ç”¨ãƒ«ãƒ¼ãƒ«ã¾ã¨ã‚
 
-| ƒRƒ}ƒ“ƒh                        | ˆÓ–¡                      |
+* **ã‚³ãƒŸãƒƒãƒˆãƒ»push/pullã¯å¿…ãšRaspberry Piä¸Šã§çµ±ä¸€ã—ã¦å®Ÿè¡Œ**
+* **mainãƒ–ãƒ©ãƒ³ãƒã«ç›´æ¥pushç¦æ­¢ã€å¿…ãšfeatureãƒ–ãƒ©ãƒ³ãƒâ†’Pull Requestã§é‹ç”¨**
+* **ä½œæ¥­å‰ã¯å¿…ãšpullã—ã¦æœ€æ–°åŒ–**
+* **ã‚³ãƒ³ãƒ•ãƒªã‚¯ãƒˆãŒå‡ºãŸå ´åˆã¯è½ã¡ç€ã„ã¦`git status`/`git diff`ã§å†…å®¹ã‚’ç¢ºèªã—ã€ä¿®æ­£ã™ã‚‹ã“ã¨**
+* **.gitignoreã‚’å®ˆã‚Šã€ãƒ“ãƒ«ãƒ‰ç”Ÿæˆç‰©ã‚„ä¸è¦ãƒ•ã‚¡ã‚¤ãƒ«ã¯ãƒªãƒã‚¸ãƒˆãƒªã«å«ã‚ãªã„**
+* **README.mdç­‰ã«ã‚»ãƒƒãƒˆã‚¢ãƒƒãƒ—æ‰‹é †ã€ãƒ«ãƒ¼ãƒ«ã€ãƒˆãƒ©ãƒ–ãƒ«äº‹ä¾‹ã‚’éšæ™‚è¿½è¨˜ã™ã‚‹**
+
+---
+
+## ã‚ˆãä½¿ã†Gitã‚³ãƒãƒ³ãƒ‰ã¾ã¨ã‚
+
+| ã‚³ãƒãƒ³ãƒ‰                        | æ„å‘³                      |
 | --------------------------- | ----------------------- |
-| git pull origin main        | ƒŠƒ‚[ƒgmain‚ğæ“¾‚µ‚ÄèŒ³‚Ìmain‚É”½‰f |
-| git checkout -b feature/xxx | V‚µ‚¢ƒuƒ‰ƒ“ƒ`‚ğì‚Á‚Ä‚»‚Ì‚Ü‚ÜØ‚è‘Ö‚¦     |
-| git add .                   | •ÏX‚µ‚½‘S‚Ä‚Ìƒtƒ@ƒCƒ‹‚ğ’Ç‰Á          |
-| git commit -m "ƒRƒƒ“ƒg"        | ’Ç‰Á•ª‚ğƒRƒ~ƒbƒgiƒRƒƒ“ƒg‚Í•K‚¸‚Â‚¯‚éj    |
-| git push origin feature/xxx | ¡‚Ìƒuƒ‰ƒ“ƒ`‚ğƒŠƒ‚[ƒg‚ÖƒAƒbƒvƒ[ƒh      |
-| git checkout main           | mainƒuƒ‰ƒ“ƒ`‚É–ß‚é             |
-| git branch                  | ¡‘¶İ‚·‚éƒuƒ‰ƒ“ƒ`ˆê——‚ğ•\¦          |
-| git status                  | ¡‚Ì•ÏXó‹µ‚ğŠm”F               |
+| git pull origin main        | ãƒªãƒ¢ãƒ¼ãƒˆmainã‚’å–å¾—ã—ã¦æ‰‹å…ƒã®mainã«åæ˜  |
+| git checkout -b feature/xxx | æ–°ã—ã„ãƒ–ãƒ©ãƒ³ãƒã‚’ä½œã£ã¦ãã®ã¾ã¾åˆ‡ã‚Šæ›¿ãˆ     |
+| git add .                   | å¤‰æ›´ã—ãŸå…¨ã¦ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è¿½åŠ           |
+| git commit -m "ã‚³ãƒ¡ãƒ³ãƒˆ"        | è¿½åŠ åˆ†ã‚’ã‚³ãƒŸãƒƒãƒˆï¼ˆã‚³ãƒ¡ãƒ³ãƒˆã¯å¿…ãšã¤ã‘ã‚‹ï¼‰    |
+| git push origin feature/xxx | ä»Šã®ãƒ–ãƒ©ãƒ³ãƒã‚’ãƒªãƒ¢ãƒ¼ãƒˆã¸ã‚¢ãƒƒãƒ—ãƒ­ãƒ¼ãƒ‰      |
+| git checkout main           | mainãƒ–ãƒ©ãƒ³ãƒã«æˆ»ã‚‹             |
+| git branch                  | ä»Šå­˜åœ¨ã™ã‚‹ãƒ–ãƒ©ãƒ³ãƒä¸€è¦§ã‚’è¡¨ç¤º          |
+| git status                  | ä»Šã®å¤‰æ›´çŠ¶æ³ã‚’ç¢ºèª               |
 
