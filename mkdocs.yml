@@ -39,6 +39,7 @@ nav:
           - control/RaspberryPi/index.md
           - pigpio:
               - control/RaspberryPi/pigpio/index.md
+	      - control/RaspberryPi/raspberrypi_lan_ssh_connection/index.md
   - 教育:
       - education/index.md
 theme:
