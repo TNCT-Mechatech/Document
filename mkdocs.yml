@@ -35,9 +35,9 @@ nav:
               - Ticker: control/mbed/api/ticker/index.md
       - 通信:
           - control/communication/index.md
-      	  - Raspberry Pi:
-	      - GPIO を用いた制御: control/RaspberryPi/index.md
-	      - RaspberryPi4Bとwindows11ノートPCによる有線LANのSSH通信: control/RaspberryPi/raspberrypi_lan_ssh_connection/index.md
+      - Raspberry Pi:
+	  - GPIO を用いた制御(pigpio): control/RaspberryPi/pigpio/index.md
+	  - RaspberryPi4Bとwindows11ノートPCによる有線LANのSSH通信: control/RaspberryPi/raspberrypi_lan_ssh_connection/index.md
   - 教育:
       - education/index.md
 theme:
